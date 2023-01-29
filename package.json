@@ -1,0 +1,31 @@
+{
+  "name": "dovepay-ui",
+  "version": "1.0.0",
+  "description": "dovepay front",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lvfd/dovepay-ui.git"
+  },
+  "keywords": [
+    "dovepay"
+  ],
+  "author": "lvfd@acca.com.cn",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lvfd/dovepay-ui/issues"
+  },
+  "homepage": "https://github.com/lvfd/dovepay-ui#readme",
+  "devDependencies": {
+    "@babel/core": "^7.20.12",
+    "@babel/preset-env": "^7.20.2",
+    "@lyufudi/uikit": "^3.15.22",
+    "@lyufudi/uikit-v2": "^2.27.5",
+    "babel-loader": "^9.1.2",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1"
+  }
+}
