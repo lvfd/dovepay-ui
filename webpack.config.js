@@ -6,7 +6,8 @@ module.exports = {
   mode: env,
   devtool: env === 'production'? 'source-map': 'inline-source-map',
   entry: {
-    main: './src/main'
+    main: './src/main',
+    'system-index': './src/system-index',
   },
   output: {
     clean: true,
@@ -49,10 +50,10 @@ module.exports = {
       }
     },
     {
-      test: /\.js$/i,
+      test: /\.(js)$/i,
       type: 'asset/resource',
       generator: {
-        filename: 'asset/libs/[name].[hash][ext]'
+        filename: 'asset/plugins/[name].[hash][ext]'
       },
       include: [
         path.resolve(__dirname, 'node_modules/@lyufudi/uikit-v2/dist'),
