@@ -57,7 +57,7 @@ module.exports = {
       },
       include: [
         path.resolve(__dirname, 'node_modules/@lyufudi/uikit-v2/dist'),
-        path.resolve(__dirname, 'node_modules/@lyufudi/uikit-lts/dist'),
+        path.resolve(__dirname, 'node_modules/@lyufudi/uikit/dist'),
         path.resolve(__dirname, 'node_modules/jquery-v2/dist'),
         path.resolve(__dirname, 'node_modules/jquery-lts/dist'),
         path.resolve(__dirname, 'node_modules/dom4'),
