@@ -1,6 +1,6 @@
 {
   "name": "@lyufudi/dovepay-ui",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "dovepay front",
   "main": "index.js",
   "scripts": {
@@ -39,6 +39,8 @@
     "webpack-cli": "^5.0.1"
   },
   "files": [
-    "dist"
+    "dist",
+    "src",
+    "webpack.config.js"
   ]
 }
