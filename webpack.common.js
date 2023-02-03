@@ -7,13 +7,13 @@ module.exports = {
   output: {
     clean: true,
     filename: env === 'production'? '[name].min.js': '[name].js',
-    path: path.resolve(__dirname, 'dist')
+    path: path.resolve(process.cwd(), 'dist')
   },
   module: {
     rules: [{
       test: /\.m?js$/,
-      include: path.resolve(__dirname, 'src'),
-      exclude: path.resolve(__dirname, 'src/static'),
+      include: path.resolve(process.cwd(), 'src'),
+      exclude: path.resolve(process.cwd(), 'src/static'),
       use: {
         loader: "babel-loader",
         options: {
@@ -51,13 +51,13 @@ module.exports = {
         filename: 'asset/plugins/[name].[hash][ext]'
       },
       include: [
-        path.resolve(__dirname, 'node_modules/@lyufudi/uikit-v2/dist'),
-        path.resolve(__dirname, 'node_modules/@lyufudi/uikit/dist'),
-        path.resolve(__dirname, 'node_modules/jquery-v2/dist'),
-        path.resolve(__dirname, 'node_modules/jquery-lts/dist'),
-        path.resolve(__dirname, 'node_modules/dom4'),
-        path.resolve(__dirname, 'node_modules/showmodaldialog'),
-        path.resolve(__dirname, 'node_modules/chart.js/dist')
+        path.resolve(process.cwd(), 'node_modules/@lyufudi/uikit-v2/dist'),
+        path.resolve(process.cwd(), 'node_modules/@lyufudi/uikit/dist'),
+        path.resolve(process.cwd(), 'node_modules/jquery-v2/dist'),
+        path.resolve(process.cwd(), 'node_modules/jquery-lts/dist'),
+        path.resolve(process.cwd(), 'node_modules/dom4'),
+        path.resolve(process.cwd(), 'node_modules/showmodaldialog'),
+        path.resolve(process.cwd(), 'node_modules/chart.js/dist')
       ]
     },
     {
@@ -66,7 +66,7 @@ module.exports = {
       generator: {
         filename: 'asset/fonts/[name][ext]'
       },
-      include: path.resolve(__dirname, 'node_modules/@lyufudi/uikit-v2/dist')
+      include: path.resolve(process.cwd(), 'node_modules/@lyufudi/uikit-v2/dist')
     }]
   },
   optimization: {
@@ -88,7 +88,12 @@ module.exports = {
   },
   resolve: {
     alias: {
-      '@src': path.resolve(__dirname, 'src')
+      '@src': path.resolve(process.cwd(), 'src')
     }
+  },
+  watch: env === 'development'? true: false,
+  watchOptions: {
+    aggregateTimeout: 1000,
+    ignored: /node_modules/
   }
 }
