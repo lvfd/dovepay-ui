@@ -43,30 +43,6 @@ module.exports = {
       generator: {
         filename: 'asset/styles/[name][ext]'
       }
-    },
-    {
-      test: /\.(js)$/i,
-      type: 'asset/resource',
-      generator: {
-        filename: 'asset/plugins/[name].[hash][ext]'
-      },
-      include: [
-        path.resolve(process.cwd(), 'node_modules/@lyufudi/uikit-v2/dist'),
-        path.resolve(process.cwd(), 'node_modules/@lyufudi/uikit/dist'),
-        path.resolve(process.cwd(), 'node_modules/jquery-v2/dist'),
-        path.resolve(process.cwd(), 'node_modules/jquery-lts/dist'),
-        path.resolve(process.cwd(), 'node_modules/dom4'),
-        path.resolve(process.cwd(), 'node_modules/showmodaldialog'),
-        path.resolve(process.cwd(), 'node_modules/chart.js/dist')
-      ]
-    },
-    {
-      test: /\.(woff|woff2|eot|ttf|otf)$/i,
-      type: 'asset/resource',
-      generator: {
-        filename: 'asset/fonts/[name][ext]'
-      },
-      include: path.resolve(process.cwd(), 'node_modules/@lyufudi/uikit-v2/dist')
     }]
   },
   optimization: {
