@@ -7,6 +7,7 @@ module.exports = merge(common, {
   entry: {
     main: './src/main',
     'system-index': './src/system-index',
+    exceptionPage: './src/exceptionPage'
   },
   output: {
     path: process.env.NODE_ENV === 'production'?
