@@ -1,4 +1,4 @@
-import bankInfo from '@src/bank-info'
+import { logoInfo as bankInfo } from '@lyufudi/dove-utils'
 
 function buildBankLogoButton(iframe) {
   const rootDoc = iframe.contentDocument

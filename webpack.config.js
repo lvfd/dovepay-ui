@@ -1,5 +1,5 @@
 const { merge } = require('webpack-merge')
-const common = require('./webpack.common.js')
+const common = require('@lyufudi/dove-utils/node/webpack.common')
 const path = require('path')
 
 module.exports = merge(common, {
@@ -7,6 +7,11 @@ module.exports = merge(common, {
   entry: {
     main: './src/main',
     'system-index': './src/system-index',
+  },
+  output: {
+    path: process.env.NODE_ENV === 'production'?
+      path.resolve(__dirname, '..', '..', 'git/dovePay/src/main/webapp/node/dovepay-ui'):
+      path.resolve(__dirname, 'dist')
   },
   module: {
     rules: [{

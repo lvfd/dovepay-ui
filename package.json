@@ -40,8 +40,6 @@
     "webpack-merge": "^5.8.0"
   },
   "files": [
-    "dist",
-    "src",
-    "webpack.common.js"
+    "dist"
   ]
 }
