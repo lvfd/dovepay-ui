@@ -8,13 +8,7 @@ if (!browser.isIE) {
     try {
       const dataEl = document.querySelector('input#accountData')
       const ctx = document.querySelector('#accountDetails').getContext('2d')
-      const canvasNode = document.querySelector('#accountDetails')
-      const parent = canvasNode.parentNode
-      const parentWidth = window.getComputedStyle(parent).getPropertyValue('max-width')
-      canvasNode.width = parseInt(parentWidth)
-      const canvasRatio = [7, 2]
-      const canvasHeight = parseInt(canvasNode.width)*parseInt(canvasRatio[1])/parseInt(canvasRatio[0])
-      canvasNode.height = canvasHeight
+      console.log('____________>sign2')
       Chart.defaults.font.size = 14
       return new Chart(ctx, config(dataEl))
     } catch(e) {
@@ -39,6 +33,7 @@ function config(el) {
       }]
     },
     options: {
+      aspectRatio: 4,
       indexAxis: 'y',
       interaction: {
         intersect: false,
